@@ -1,16 +1,95 @@
 ---
-
+import Default from "@/Layouts/default.astro";
+import { Image } from "astro:assets";
+import cipHead from "@/assets/houston.webp";
+import SnowFall from "@/components/SnowFall.astro";
+import Banner from "@/components/Banner.astro";
+import Carousel from "@/components/carousel.astro";
+import Card from "@/components/card.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Default title="Crosure">
+  <SnowFall />
+  <Banner />
+  <!-- <p>Hello</p> -->
+  <div class="block overflow-auto">
+    <!-- <Carousel /> -->
+
+    <div class="grid place-content-center p-4">
+      <p class="text-gray-500 dark:text-gray-400">
+        Track work across the enterprise through an open, collaborative
+        platform. Link issues across Jira and ingest data from other software
+        development tools, so your IT support and operations teams have richer
+        contextual information to rapidly respond to requests, incidents, and
+        changes.
+      </p>
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <p class="text-gray-500 dark:text-gray-400">
+        Deliver great service experiences fast - without the complexity of
+        traditional ITSM solutions.Accelerate critical development work,
+        eliminate toil, and deploy changes with ease, with a complete audit
+        trail for every change.
+      </p>
+
+      <p class="text-gray-500 dark:text-gray-400">
+        Track work across the enterprise through an open, collaborative
+        platform. Link issues across Jira and ingest data from other software
+        development tools, so your IT support and operations teams have richer
+        contextual information to rapidly respond to requests, incidents, and
+        changes.
+      </p>
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <p class="text-gray-500 dark:text-gray-400">
+        Deliver great service experiences fast - without the complexity of
+        traditional ITSM solutions.Accelerate critical development work,
+        eliminate toil, and deploy changes with ease, with a complete audit
+        trail for every change.
+      </p>
+    </div>
+
+    <div>
+      <div class="bg-blue-200 h-full m-10 rounded-lg">
+        <div class="container flex gap-1 items-center justify-center">
+          <Image
+            src={cipHead}
+            alt="Coding in Public head for course"
+            width={160}
+            class="w-24 sm:w-44"
+          />
+          <div class="grid gap-1 text-left">
+            <p class="text-sm font-extralight">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Expedita, similique totam! Nihil doloremque, illo neque quidem
+              quam fugit ex consequuntur minus reprehenderit omnis, hic labore.
+              Illo fugit in mollitia expedita.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="xl:flex gap-2">
+      <Card
+        url="astro"
+        title="Astro"
+        amount="95"
+        text="API Access"
+        description="showcase it's documentation"
+      />
+      <Card
+        url="flutter"
+        title="Flutter"
+        amount="32"
+        text="API Access"
+        description="showcase it's documentation"
+      />
+      <Card
+        url="leets"
+        title="Leets Codes"
+        amount="13"
+        text="scores"
+        description="showcase it's documentation"
+      />
+    </div>
+  </div>
+</Default>

@@ -1,0 +1,71 @@
+---
+import Default from "@/Layouts/default.astro";
+import SnowFall from "@/components/SnowFall.astro";
+---
+
+<Default title="Contact">
+  <SnowFall />
+  <div class="grid w-50 h-screen">
+    <!-- <p
+      class="text-xl font-extralight bg-blue-100 py-2 px-10 mt-10 grid place-content-center rounded-lg w-1/2">
+      Hire Me
+    </p> -->
+    <form
+      class="w-full lg:w-[100%] rounded-2xl p-3 sm:p-8 flex items-center justify-center">
+      <div class="m-6">
+        <div class="flex flex-row gap-4 xl:gap-6 xl:flex-row justify-between">
+          <div class="flex flex-col w-full xl:w-1/2">
+            <input
+              type="text"
+              name="user-name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="John"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Email address</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="john.doe@company.com"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col my-2">
+          <textarea
+            name=""
+            id=""
+            cols="60"
+            rows="10"
+            class="rounded mb-5 bg-gray-200 w-ful pl-2"
+            placeholder="Your Message"></textarea>
+        </div>
+
+        <div class="mt-2 w-full text-center rounded-lg py-3 font-bold text-xl">
+          <button
+            class="wbg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >Submit Message</button
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+</Default>
+
+<style>
+  input[type="submit"] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>

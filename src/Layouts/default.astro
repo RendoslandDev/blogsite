@@ -1,0 +1,98 @@
+---
+const { title } = Astro.props;
+import { Image } from "astro:assets";
+import cipHead from "@/assets/houston.webp";
+import Underlined from "@/components/underlined.astro";
+import Sidebar from "@/components/sidebar.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/cip-icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{title}</title>
+  </head>
+  <body class="overflow-y-auto">
+    <header class="flex justify-around m-20">
+      <a href="/">
+        <div>
+          <div>🐹Editor</div>
+          <div>codes🐹</div>
+        </div>
+      </a>
+      <nav>
+        <div class="bg-blue-600 w-60 py-5 px-6 rounded">
+          <div class="container flex gap-1 items-center justify-center">
+            <Image
+              src={cipHead}
+              alt="Coding in Public head for course"
+              width={60}
+              class="w-24 sm:w-4"
+            />
+            <div class="grid gap-1 text-left">
+              <p class="text-sm font-extralight">by Rendosland Agyapong</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main transition:animate="slide">
+      <hr color="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <div class="flex h-screen">
+        <Sidebar class="w-1/4" />
+        <slot class="w-3/4" />
+      </div>
+    </main>
+    <footer class="bg-blue-100 h-40 m-10 rounded-lg translate-y-20 bottom-0">
+      <div
+        class="bg-blue-50 translate-y-5 xl:bg-blue-50 w-40 py-5 px-6 rounded hover:translate-y-10 rotate-45 border border-blue-900">
+        <div class="container flex gap-1 items-center justify-center">
+          <Image
+            src={cipHead}
+            alt="Coding in Public head for course"
+            width={60}
+            class="w-24 sm:w-4"
+          />
+          <div class="grid gap-1 text-left">
+            <p class="text-sm font-extralight">! Live Watch</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pl-40 xl:grid gap-1 text-left place-content-center">
+        <p class="text-sm font-bold">By Rendosland Agyapong</p>
+        <p class="">
+          Contact Us<Underlined>
+            <a
+              href="/"
+              class="text-astro-400
+              text-xs
+              no-underline
+              focus:outline-transparent
+              focus-visible:ring-4
+              ring-astro-accent-dark-pink
+              ring-offset-2
+              ring-offset-astro-900
+              rounded"
+              >CODE-EDITORS</a
+            ></Underlined
+          >
+        </p>
+      </div>
+
+      <div
+        class="p-5 mb-10 bg-blue-600 xl:bg-blue-600 float-end w-20 h-15 rounded">
+        <Image
+          src={cipHead}
+          alt="heard of a course"
+          width={160}
+          class="w-14 sm:w-40"
+        />
+      </div>
+    </footer>
+  </body>
+</html>

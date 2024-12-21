@@ -1,0 +1,64 @@
+---
+import Layout from "@/Layouts/Layout.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("flutter");
+  return posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+      props: {
+        post,
+      },
+    };
+  });
+}
+
+interface Props {
+  post: CollectionEntry<"flutter">;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title="flutter -R E A D">
+  <div class="flex gap-4 m-4">
+    <div
+      class="w-2/5 border border-black grid place-content-top h-40 p-4 rounded-md">
+      <div
+        class="container block gap-1 items-center justify-center place-content-center">
+        <img
+          class="w-20 h-20 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+          src={post.data.share.image}
+          ,
+          width={260}
+          alt="Bordered avatar"
+        />
+        <div class="grid gap-1 text-left justify-center">
+          <p class="text-sm font-extralight">Written:by Rendosland Agyapong</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full m-10 p-10">
+      <h1 class="font-bold uppercase items-center underline">
+        {post.data.share.title}
+      </h1>
+
+      <p class="p-6">{post.data.share.description}</p>
+      <h2>{post.data.date}</h2>
+      <Content />
+      <footer>
+        <ul class="tags">
+          {post.data.tags.map((tag) => <li>{tag}</li>)}
+        </ul>
+        <p>
+          <a href="/flutter">&larr; back to all posts</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+</Layout>

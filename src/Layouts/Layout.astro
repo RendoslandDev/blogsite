@@ -1,0 +1,45 @@
+---
+const { title } = Astro.props;
+import { Image } from "astro:assets";
+import cipHead from "@/assets/houston.webp";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/cip-icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{title}</title>
+  </head>
+  <body class="overflow-y-auto">
+    <header class="flex justify-around m-20">
+      <a href="/">
+        <div>
+          <div>🐹Editor</div>
+          <div>codes🐹</div>
+        </div>
+      </a>
+      <nav>
+        <div class="bg-blue-600 w-40 py-5 px-6 rounded">
+          <div class="container flex gap-1 items-center justify-center">
+            <Image
+              src={cipHead}
+              alt="Coding in Public head for course"
+              width={60}
+              class="w-24 sm:w-4"
+            />
+            <div class="grid gap-1 text-left">
+              <p class="text-sm font-extralight">Blogs</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main transition:animate="slide">
+      <slot />
+    </main>
+  </body>
+</html>
