@@ -15,15 +15,15 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
     <title>{title}</title>
   </head>
   <body class="overflow-y-auto">
-    <header class="flex justify-around m-20">
-      <a href="/">
+    <header class="flex justify-around m-10">
+      <a href="/" class="hidden xl:flex">
         <div>
           <div>🐹Editor</div>
           <div>codes🐹</div>
         </div>
       </a>
       <nav>
-        <div class="bg-blue-600 w-40 py-5 px-6 rounded">
+        <div class="xl:bg-blue-600 w-40 py-5 px-6 rounded">
           <div class="container flex gap-1 items-center justify-center">
             <Image
               src={cipHead}

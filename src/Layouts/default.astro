@@ -47,9 +47,9 @@ import { ViewTransitions } from "astro:transitions";
         <slot class="w-3/4" />
       </div>
     </main>
-    <footer class="bg-blue-100 h-40 m-10 rounded-lg translate-y-20 bottom-0">
+    <footer class="xl:bg-blue-100 h-40 m-10 rounded-lg translate-y-20 bottom-0">
       <div
-        class="bg-blue-50 translate-y-5 xl:bg-blue-50 w-40 py-5 px-6 rounded hover:translate-y-10 rotate-45 border border-blue-900">
+        class="bg-blue-50 rotate-none xl:bg-blue-50 w-40 py-5 px-6 rounded hover:translate-y-10 rotate-45 border border-blue-900">
         <div class="container flex gap-1 items-center justify-center">
           <Image
             src={cipHead}
@@ -84,13 +84,12 @@ import { ViewTransitions } from "astro:transitions";
         </p>
       </div>
 
-      <div
-        class="p-5 mb-10 bg-blue-600 xl:bg-blue-600 float-end w-20 h-15 rounded">
+      <div class="xl:p-5 mb-10 xl:bg-blue-600 float-end w-20 h-15 rounded">
         <Image
           src={cipHead}
           alt="heard of a course"
           width={160}
-          class="w-14 sm:w-40"
+          class="hidden xl:w-14 sm:w-40"
         />
       </div>
     </footer>
