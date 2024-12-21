@@ -3,10 +3,13 @@ import Layout from "@/Layouts/Layout.astro";
 import Image from "astro/components/Image.astro";
 import Liston from "@/assets/houston.webp";
 import { getCollection } from "astro:content";
+import SnowFall from "@/components/SnowFall.astro";
 const posts = await getCollection("blog");
 ---
 
 <Layout>
+  <SnowFall />
+
   <!-- <div class="pl-20"></div> -->
   <section class=" xl:flex flex-row-2">
     {posts.map((post)=>{
