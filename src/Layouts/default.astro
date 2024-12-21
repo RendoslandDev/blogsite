@@ -17,8 +17,8 @@ import { ViewTransitions } from "astro:transitions";
     <title>{title}</title>
   </head>
   <body class="overflow-y-auto">
-    <header class="flex justify-around m-20">
-      <a href="/">
+    <header class="block xl:flex justify-around m-20">
+      <a href="/" class="hidden xl:flex">
         <div>
           <div>🐹Editor</div>
           <div>codes🐹</div>
@@ -63,13 +63,13 @@ import { ViewTransitions } from "astro:transitions";
         </div>
       </div>
 
-      <div class="pl-40 xl:grid gap-1 text-left place-content-center">
+      <div class="hidden xl:pl-40 xl:grid gap-1 text-left place-content-center">
         <p class="text-sm font-bold">By Rendosland Agyapong</p>
-        <p class="">
+        <p class="hidden xl:block">
           Contact Us<Underlined>
             <a
               href="/"
-              class="text-astro-400
+              class="xl:text-astro-400
               text-xs
               no-underline
               focus:outline-transparent

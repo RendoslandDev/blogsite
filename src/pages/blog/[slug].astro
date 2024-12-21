@@ -28,9 +28,8 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-  <div class="flex gap-4 m-4">
-    <div
-      class="w-2/5 border border-black grid place-content-top h-40 p-4 rounded-md">
+  <div class="block xl:flex gap-4 m-4">
+    <div class="xl:w-2/5 border border-black h-40 p-4 rounded-md">
       <div
         class="container block gap-1 items-center justify-center place-content-center">
         <img
@@ -45,12 +44,12 @@ const { Content } = await post.render();
         </div>
       </div>
     </div>
-    <div class="w-full m-10 p-10">
+    <div class="grid place-content-center w-full xl:w-full m-5">
       <h1 class="font-bold uppercase items-center underline">
         {post.data.share.title}
       </h1>
 
-      <p class="p-6">{post.data.share.description}</p>
+      <p class="">{post.data.share.description}</p>
       <h2>{post.data.date}</h2>
       <Content />
       <footer>
