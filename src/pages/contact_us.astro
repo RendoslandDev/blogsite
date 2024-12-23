@@ -4,58 +4,79 @@ import SnowFall from "@/components/SnowFall.astro";
 ---
 
 <Default title="Contact">
-  <SnowFall />
-  <div class="grid w-50 h-screen">
-    <!-- <p
-      class="text-xl font-extralight bg-blue-100 py-2 px-10 mt-10 grid place-content-center rounded-lg w-1/2">
-      Hire Me
-    </p> -->
-    <form
-      class="w-full lg:w-[100%] rounded-2xl p-3 sm:p-8 flex items-center justify-center">
-      <div class="m-6">
-        <div class="flex flex-row gap-4 xl:gap-6 xl:flex-row justify-between">
-          <div class="flex flex-col w-full xl:w-1/2">
+  <!-- <SnowFall /> -->
+  <div class="block">
+    <section class="bg-white dark:bg-gray-900 rounded">
+      <div class="py-8 max-w-screen-xl text-center">
+        <h1
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          Get the NewsLetter's That Helps You Learn , Build and Grow
+        </h1>
+        <p
+          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
+          Learn from experts. Build something new. Grow your career. The web is
+          more fun with friends; let’s stick together.
+        </p>
+      </div>
+    </section>
+    <div class="block xl:flex">
+      <p class="text-xl font-extralight py-2 px-10 mt-10 rounded-lg w-">
+        <span class="font-bold text-xl break-before-auto">
+          New episodes, tutorials, and career growth for web devs — direct to
+          your inbox.</span
+        >
+        <br />I publish a lot of material — new Learn With Jason episodes,
+        tutorials, career and personal growth lessons, and a lot more — and it
+        shows up on a lot of different sites. The only place where I share all
+        of it is in my newsletter, which I send out every week (more or less)
+      </p>
+      <form class="w-full lg:w-[100%] rounded-2xl p-3 sm:p-8 flex">
+        <div class="m-6">
+          <div class="flex flex-row gap-4 xl:gap-6 xl:flex-row justify-between">
+            <div class="flex flex-col w-full xl:w-1/2">
+              <input
+                type="text"
+                name="user-name"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="John"
+              />
+            </div>
+          </div>
+          <div class="mb-6">
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Email address</label
+            >
             <input
-              type="text"
-              name="user-name"
+              type="email"
+              id="email"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="John"
+              placeholder="john.doe@company.com"
+              required
             />
           </div>
-        </div>
-        <div class="mb-6">
-          <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Email address</label
-          >
-          <input
-            type="email"
-            id="email"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="john.doe@company.com"
-            required
-          />
-        </div>
 
-        <div class="flex flex-col my-2">
-          <textarea
-            name=""
-            id=""
-            cols="60"
-            rows="10"
-            class="rounded mb-5 bg-gray-200 w-ful pl-2"
-            placeholder="Your Message"></textarea>
-        </div>
+          <div class="flex flex-col my-2">
+            <textarea
+              name=""
+              id=""
+              cols="60"
+              rows="10"
+              class="rounded mb-5 bg-gray-200 w-ful pl-2"
+              placeholder="Your Message"></textarea>
+          </div>
 
-        <div class="mt-2 w-full text-center rounded-lg py-3 font-bold text-xl">
-          <button
-            class="wbg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            >Submit Message</button
-          >
+          <div
+            class="mt-2 w-full text-center rounded-lg py-3 font-bold text-xl">
+            <button
+              class="wbg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 uppercase"
+              >Subscribe</button
+            >
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </Default>
 
