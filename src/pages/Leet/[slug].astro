@@ -1,5 +1,4 @@
 ---
-import SnowFall from "@/components/SnowFall.astro";
 import Layout from "@/Layouts/Layout.astro";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
@@ -27,8 +26,6 @@ const { Content } = await post.render();
 ---
 
 <Layout title="flutter -R E A D">
-  <SnowFall />
-
   <div class="block xl:flex gap-4 m-4">
     <div class="grid place-content-center pr-5 w-full xl:w-full m-5">
       <h1 class="font-bold uppercase items-center underline">

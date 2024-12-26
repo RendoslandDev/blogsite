@@ -1,9 +1,6 @@
 ---
 import Layout from "@/Layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
-import cipHead from "@/assets/houston.webp";
-import SnowFall from "@/components/SnowFall.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -29,8 +26,6 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-  <SnowFall />
-
   <div class="block xl:flex gap-4 m-4">
     <div class="grid place-content-center w-full pr-5 xl:w-full m-5">
       <h1 class="font-bold uppercase items-center underline">

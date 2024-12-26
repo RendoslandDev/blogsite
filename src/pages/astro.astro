@@ -1,16 +1,11 @@
 ---
 import Layout from "@/Layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
-import Liston from "@/assets/houston.webp";
 import { getCollection } from "astro:content";
-import SnowFall from "@/components/SnowFall.astro";
+
 const posts = await getCollection("blog");
-import cipHead from "@/assets/houston.webp";
 ---
 
 <Layout>
-  <!-- <SnowFall /> -->
-
   {
     posts.map((post) => {
       return (
