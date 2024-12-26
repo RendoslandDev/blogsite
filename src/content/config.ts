@@ -7,7 +7,7 @@ export const collections = {
   blog: defineCollection({
        loader: glob({ base: './src/content/astro', pattern: '**/*.{md,mdx}' }),
     schema: z.object({
-      date: z.coerce.date(),
+      date: z.date(),
       title: z.string(),
       slug: z.string().optional(),
       tags: z.array(z.string().optional()),
@@ -25,7 +25,7 @@ export const collections = {
   flutter: defineCollection({
        loader: glob({ base: './src/content/flutter', pattern: '**/*.{md,mdx}' }),
     schema: z.object({
-      date: z.coerce.date(),
+      date: z.date(),
       title: z.string(),
       slug: z.string().optional(),
       tags: z.array(z.string().optional()),
@@ -44,7 +44,7 @@ export const collections = {
        loader: glob({ base: './src/content/flutter', pattern: '**/*.{md,mdx}' }),
     schema: z.object({
       date: z.date(),
-      title: z.coerce.date(),
+      title: z.string(),
       slug: z.string().optional(),
       tags: z.array(z.string().optional()),
       share: z
