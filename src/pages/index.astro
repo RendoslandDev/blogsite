@@ -1,87 +1,125 @@
 ---
+import Card from "@/components/card.astro";
+import SnowFall from "@/components/SnowFall.astro";
 import Default from "@/Layouts/default.astro";
 import { Image } from "astro:assets";
 import cipHead from "@/assets/houston.webp";
-import SnowFall from "@/components/SnowFall.astro";
-import Banner from "@/components/Banner.astro";
-import Carousel from "@/components/carousel.astro";
-import Card from "@/components/card.astro";
-import Layout from "@/Layouts/Layout.astro";
-
-export interface Props {
-  url?: string;
-  title: string;
-  amount: string;
-  text: string;
-  description: string;
-}
-
-const { title, amount, text, url, description } = Astro.props;
 ---
 
-<Layout>
-  <section class="bg-white dark:bg-gray-900 rounded">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-      <h1
-        class="mb-4 text-8xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-8xl dark:text-white">
-        Learn. build. grow.together.
-      </h1>
-      <p
-        class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
-        Learn from the web’s leading experts. Build something new. Grow your
-        career. Let’s do it together.
-      </p>
-    </div>
-  </section>
-  <section class="p-20">
-    <div class="mx-auto px-4 py-8 max-w-screen-xl text-center">
-      <h1 class="font-bold text-6xl">
-        <span class="bg-black text-white rounded-lg p-2">Learn</span> from the web’s
-        leading experts.
-      </h1>
-      <p class="w-1/2 text-center mx-auto">
-        Every Thursday, Jason pair programs with the brightest minds in web
-        development to learn something new in 90 minutes.
-      </p>
-      <a href="" class="text-red-400">see who just blogged &rarr;</a>
-    </div>
-  </section>
-  <section class="bg-black dark:bg-gray-200 rounded">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-      <h1
-        class="mb-4 text-6xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-        <span class="bg-black text-white p-2 rounded-lg">Build</span> Something new
-      </h1>
-      <p
-        class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
-        Rendosland shares insights, lessons learned, and past mistakes. He’s
-        been building a career in web dev for 20 years. Maybe he can help you
-        build yours, too. <br />
-        <a href=""> See all videos &rarr; </a>
-      </p>
-    </div>
-  </section>
-  <section class="bg-white dark:bg-orange-200 rounded p-10">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-      <h1
-        class="mb-4 text-8xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-black">
-        Let's get better <span class="bg-black text-white rounded-lg"
-          >together</span
-        >.
-      </h1>
-      <p
-        class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
-        Code is more fun with friends. Join a growing collection of learners and
-        teachers who are working to build a better community together.
-      </p>
-      <a href="">join my Github &rarr;</a>
-    </div>
-  </section>
-</Layout>
+<Default title="Crosure">
+  <div class="w-screen bodypack m-5 scroll-smooth">
+    <section class="bg-white dark:bg-gray-900 rounded">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <h1
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          Blog Posts
+        </h1>
+        <p
+          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
+          Tutorials, quick tips, and other helpful resources for learning more
+          about code!
+        </p>
+        <div
+          class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+          <a
+            href="#"
+            class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            Get started
+            <svg
+              class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            Learn more
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <div class="w-full block xl:flex mx-auto p-5">
+      <Card
+        title="Astro"
+        amount="95"
+        text="API Access"
+        description="showcase it's documentation"
+      />
+      <div class="my-auto">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          sint maxime mollitia corporis magni inventore optio eius ratione quas!
+          Quos nam dolorem blanditiis ut ex accusamus suscipit, aliquam nostrum
+          mollitia!
+        </p>
+        <button
+          type="button"
+          class="max-w-fit text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">
+          <a href="/astro">Explore</a>
+        </button>
+      </div>
+    </div>
+    <div class="w-full block xl:flex mx-auto p-5">
+      <Card
+        url="/flutter"
+        title="Flutter"
+        amount="32"
+        text="API Access"
+        description="showcase it's documentation"
+      />
+      <div class="my-auto">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          sint maxime mollitia corporis magni inventore optio eius ratione quas!
+          Quos nam dolorem blanditiis ut ex accusamus suscipit, aliquam nostrum
+          mollitia!
+        </p>
+        <button
+          type="button"
+          class="max-w-fit text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">
+          <a href="/flutter">Explore</a>
+        </button>
+      </div>
+    </div>
+    <div class="w-full block xl:flex mx-auto p-5">
+      <Card
+        url="/leets"
+        title="Leets Codes"
+        amount="13"
+        text="scores"
+        description="showcase it's documentation"
+      />
+      <div class="my-auto">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          sint maxime mollitia corporis magni inventore optio eius ratione quas!
+          Quos nam dolorem blanditiis ut ex accusamus suscipit, aliquam nostrum
+          mollitia!
+        </p>
+        <button
+          type="button"
+          class="max-w-fit text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">
+          <a href="/leets">Explore</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</Default>
 <style>
-  bodypack {
-    height: 100%;
-    width: 100%;
+  main {
+    margin: 100px;
+  }
+  p {
+    padding-block: 10px;
   }
 </style>
